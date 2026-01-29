@@ -1,14 +1,22 @@
-<script setup>
-import Navbar from './components/Navbar.vue'
-</script>
-
 <template>
-  <Navbar />
+  <v-app>
+    <Navbar />
+    <v-main class="main">
+      <Hero />
+      <ProjectSection />
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+<script setup>
+import Navbar from './components/Navbar.vue'
+import Hero from './components/Hero.vue'
+import ProjectSection from './components/ProjectSection.vue';
+</script>
+
+<style scoped>
+.main {
+  padding: 0 !important;
+  min-height: auto !important;
 }
 </style>
