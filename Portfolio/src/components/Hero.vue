@@ -1,7 +1,10 @@
 <template>
   <section class="hero">
     <div class="content">
-      <h3 class="hello">👋 Bonjour,</h3>
+      <h3 class="hello">
+        <i class="pi pi-code"></i>
+        Bonjour,
+      </h3>
 
       <h1 class="title">
         Je suis
@@ -15,11 +18,6 @@
         <br />
         Etudiante ingénieure en informatique
       </h1>
-
-      <div class="actions">
-        <v-btn color="black" variant="flat">View My Work</v-btn>
-        <v-btn variant="outlined">Contact Me</v-btn>
-      </div>
     </div>
   </section>
 </template>
