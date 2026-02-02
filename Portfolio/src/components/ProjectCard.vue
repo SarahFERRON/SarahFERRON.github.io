@@ -1,86 +1,60 @@
 <template>
-    <article class="card">
-      <div class="text">
-        <h4 class="title">{{ title }}</h4>
-        <p class="description">{{ description }}</p>
-        <v-btn color="#403930"  class="btn">
-          <i class="pi pi-github"></i>
-          Voir sur GitHub
-        </v-btn>
-      </div>
-  
-      <div class="image-wrapper">
-        <img :src="image" alt="" />
-      </div>
-    </article>
-  </template>
-  
-<script setup>
+  <article :class="['card', { featured }]">
+    <img :src="image" :alt="title" class="image" />
 
+    <div class="content">
+      <h4>{{ title }}</h4>
+      <p>{{ description }}</p>
+      <v-btn variant="text" size="small">
+        <i class="pi pi-github"></i>
+        Voir le projet →
+      </v-btn>
+    </div>
+  </article>
+</template>
+
+<script setup>
 defineProps({
   title: String,
   description: String,
   image: String,
+  featured: Boolean,
 })
 </script>
 
 <style scoped>
 .card {
   display: flex;
-  gap: 3rem;
-  background: #fff;
-  border-radius: 24px;
-  overflow: hidden;
-  align-items: top;
-}
-
-.text {
-  flex: 1;
-  padding: 3rem;
-  display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-}
-
-.title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #333;
-}
-
-.description {
-  color: #555;
-  line-height: 1.6;
-}
-
-.btn {
-  align-self: flex-start;
-  font-weight: 600;
-}
-
-/* Image */
-.image-wrapper {
-  flex: 1;
-  background: #e9f5ec;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-wrapper img {
-  width: 100%;
   height: 100%;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* 🔥 même hauteur que les autres */
+.image {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .card {
-    flex-direction: column-reverse;
-  }
+.content {
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
 
-  .text {
-    padding: 2rem;
+/* Featured = juste plus large, pas plus haut */
+.card.featured {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .card.featured {
+    grid-column: span 1;
   }
 }
 </style>

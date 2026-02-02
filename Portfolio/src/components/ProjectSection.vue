@@ -2,58 +2,89 @@
   <section id="work" class="work-section">
     <h3 class="heading">Mes projets</h3>
 
-    <div class="cards">
+    <div class="grid">
+      <ProjetCard v-bind="projects[0]" featured />
       <ProjetCard
-        title="Portfolio - Janvier 2026"
-        description="Designed some empty state screens in kawaii style for the popular sheepify app. Tailwind lets you conditionally apply utility classes in different states using variant modifiers."
-        image="/src/assets/project1.png"
-      />
-      <ProjetCard
-        title="Building Devis - Septembre 2024 à Juin 2025"
-        description="Designed some empty state screens in kawaii style for the popular sheepify app. Tailwind lets you conditionally apply utility classes in different states using variant modifiers."
-        image="/src/assets/building-devis.png"
-      />
-      <ProjetCard
-        title="Communes Bretonnes - Janvier 2024 à Juin 2024 "
-        description="Designed some empty state screens in kawaii style for the popular sheepify app. Tailwind lets you conditionally apply utility classes in different states using variant modifiers."
-        image="/src/assets/communes-bretonnes.png"
-      />
-      <ProjetCard
-        title="Sporttrack V2 - Octobre 2024"
-        description="Réalisation d'un site web de suivi de sport. En Octobre 2023, codage des pages (HTML/CSS), puis en Octobre 2024, création du site web en PHP puis en JavaScript en réutilisant les pages précédemment réalisées."
-        image="/src/assets/sporttrack.png"
-      />
-      <ProjetCard
-        title="Jeu de Wythoff - Novembre 2023"
-        description="Designed some empty state screens in kawaii style for the popular sheepify app. Tailwind lets you conditionally apply utility classes in different states using variant modifiers."
-        image="/src/assets/jeu-de-wythoff.png"
+        v-for="(project, index) in projects.slice(1)"
+        :key="index"
+        v-bind="project"
       />
     </div>
   </section>
 </template>
 
+
 <script setup>
 import ProjetCard from './ProjectCard.vue'
+
+const projects = [
+  {
+    title: 'Portfolio - Janvier 2026',
+    description:
+      'Portfolio personnel en Vue 3 et Vuetify mettant en avant mes projets récents.',
+    image: '/src/assets/portfolio.png',
+  },
+  {
+    title: 'Building Devis - Septembre 2024 à Juin 2025',
+    description:
+      'Application web de gestion de devis pour le bâtiment avec back-office.',
+    image: '/src/assets/building-devis.png',
+  },
+  {
+    title: 'Communes Bretonnes - Janvier 2024 à Juin 2024',
+    description:
+      'Site de valorisation du patrimoine breton avec carte interactive.',
+    image: '/src/assets/communes-bretonnes.png',
+  },
+  {
+    title: 'Sporttrack V2 - Octobre 2024',
+    description:
+      'Application de suivi sportif avec historique et statistiques.',
+    image: '/src/assets/sporttrack.png',
+  },
+  {
+    title: 'Jeu de Wythoff - Novembre 2023',
+    description:
+      'Jeu mathématique en JavaScript avec interface interactive.',
+    image: '/src/assets/jeu-de-wythoff.png',
+  },
+]
 </script>
 
 <style scoped>
 .work-section {
-  padding: 5rem 3rem;
+  padding: 4rem 3rem;
+  background-color: #ffddbf;
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  background-color: #ffddbf;
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #403930;
+  text-align: left;
+  max-width: 1200px;
 }
 
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+/* Featured */
+.featured {
+  max-width: 100%;
+}
+
+/* Grid */
+.grid {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
