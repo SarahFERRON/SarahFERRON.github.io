@@ -4,8 +4,8 @@
 
     <!-- Desktop links -->
     <ul class="nav-links" :class="{ open: showMenu }">
-      <li><a href="#">Home</a></li>
-      <li><a href="#work">Works</a></li>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#work">Projets</a></li>
       <li><a href="#testimonial">Testimonials</a></li>
       <li><a href="#about">About</a></li>
     </ul>
