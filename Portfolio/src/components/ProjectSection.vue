@@ -23,7 +23,7 @@ const projects = [
     description:
       'Portfolio personnel en Vue 3 et Vuetify mettant en avant mes projets récents.',
     technologies: 'Vue 3, Vuetify',
-    image: '/src/assets/portfolio.png',
+    image: '/public/portfolio.png',
     page:'https://github.com/SarahFERRON/SarahFERRON.github.io',
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     description:
       'Application web de gestion de rendez-vous avec des artisans. L\'appliction localise les artisans les plus près de vous et permet d\'échanger avec eux via une messagerie.',
     technologies: 'Vue 3, Ionic, PostgreSQL',
-    image: '/src/assets/building-devis.png',
+    image: '/public/building-devis.png',
     page:'https://github.com/SarahFERRON/building-devis',
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     description:
       'Application de valorisation du patrimoine breton en présentant les facteurs d\'attractivité d\'une commune.',
     technologies: 'Java, JavaFX, MySQL',
-    image: '/src/assets/communes-bretonnes.png',
+    image: '/public/communes-bretonnes.png',
     page:'https://github.com/SarahFERRON/communes-bretonnes',
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     description:
       'Application de suivi sportif avec historique et statistiques. Le projet a été réalisé dans un premier temps en Octobre 2023 avec le codage des pages HTML/CSS, puis dans un second temps en Octobre 2024 avec la création du site web en PHP puis en Javascript.',
     technologies: 'HTML, CSS, PHP, JavaScript',
-    image: '/src/assets/sporttrack.png',
+    image: '/public/sporttrack.png',
     page:'https://github.com/SarahFERRON/sporttrack-v2-js',
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     description:
       'Jeu mathématique en Java avec une version de jeu humain contre humain et une seconde humain contre ordinateur avec une stratégie gagnante.',
     technologies: 'Java',
-    image: '/src/assets/jeu-de-wythoff.png',
+    image: '/public/jeu-de-wythoff.png',
     page:'https://github.com/SarahFERRON/wythoff-game',
   },
 ]
