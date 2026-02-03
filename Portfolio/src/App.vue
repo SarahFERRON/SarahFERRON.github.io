@@ -5,13 +5,15 @@
       <Hero />
       <ProjectSection />
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
-import ProjectSection from './components/ProjectSection.vue';
+import ProjectSection from './components/ProjectSection.vue'
+import Footer from './components/Footer.vue';
 </script>
 
 <style scoped>

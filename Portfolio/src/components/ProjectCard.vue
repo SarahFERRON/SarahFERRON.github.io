@@ -3,11 +3,18 @@
     <img :src="image" :alt="title" class="image" />
 
     <div class="content">
-      <h4>{{ title }}</h4>
+      <h4 style="font-weight: bold;">{{ title }}</h4>
       <p>{{ description }}</p>
-      <v-btn variant="text" size="small">
+      <v-btn 
+        class="btn px-3"
+        color="#403930" 
+        size="small" 
+        target="_blank"
+        rel="noopener"
+        :href="page"
+      >
         <i class="pi pi-github"></i>
-        Voir le projet →
+        Voir le projet
       </v-btn>
     </div>
   </article>
@@ -19,6 +26,7 @@ defineProps({
   description: String,
   image: String,
   featured: Boolean,
+  page: String,
 })
 </script>
 
@@ -51,6 +59,13 @@ defineProps({
 .card.featured {
   grid-column: span 2;
 }
+
+.btn {
+  align-self: center;
+  width: fit-content;
+  padding-inline: 0;
+}
+
 
 @media (max-width: 900px) {
   .card.featured {
