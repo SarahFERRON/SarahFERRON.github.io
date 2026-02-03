@@ -22,34 +22,39 @@ const projects = [
     title: 'Portfolio - Janvier 2026',
     description:
       'Portfolio personnel en Vue 3 et Vuetify mettant en avant mes projets récents.',
+    technologies: 'Vue 3, Vuetify',
     image: '/src/assets/portfolio.png',
     page:'https://github.com/SarahFERRON/SarahFERRON.github.io',
   },
   {
     title: 'Building Devis - Septembre 2024 à Juin 2025',
     description:
-      'Application web de gestion de devis pour le bâtiment avec back-office.',
+      'Application web de gestion de rendez-vous avec des artisans. L\'appliction localise les artisans les plus près de vous et permet d\'échanger avec eux via une messagerie.',
+    technologies: 'Vue 3, Ionic, PostgreSQL',
     image: '/src/assets/building-devis.png',
     page:'https://github.com/SarahFERRON/building-devis',
   },
   {
     title: 'Communes Bretonnes - Janvier 2024 à Juin 2024',
     description:
-      'Site de valorisation du patrimoine breton avec carte interactive.',
+      'Application de valorisation du patrimoine breton en présentant les facteurs d\'attractivité d\'une commune.',
+    technologies: 'Java, JavaFX, MySQL',
     image: '/src/assets/communes-bretonnes.png',
     page:'https://github.com/SarahFERRON/communes-bretonnes',
   },
   {
     title: 'Sporttrack V2 - Octobre 2024',
     description:
-      'Application de suivi sportif avec historique et statistiques.',
+      'Application de suivi sportif avec historique et statistiques. Le projet a été réalisé dans un premier temps en Octobre 2023 avec le codage des pages HTML/CSS, puis dans un second temps en Octobre 2024 avec la création du site web en PHP puis en Javascript.',
+    technologies: 'HTML, CSS, PHP, JavaScript',
     image: '/src/assets/sporttrack.png',
     page:'https://github.com/SarahFERRON/sporttrack-v2-js',
   },
   {
     title: 'Jeu de Wythoff - Novembre 2023',
     description:
-      'Jeu mathématique en JavaScript avec interface interactive.',
+      'Jeu mathématique en Java avec une version de jeu humain contre humain et une seconde humain contre ordinateur avec une stratégie gagnante.',
+    technologies: 'Java',
     image: '/src/assets/jeu-de-wythoff.png',
     page:'https://github.com/SarahFERRON/wythoff-game',
   },

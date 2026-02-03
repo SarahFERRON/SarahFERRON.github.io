@@ -5,6 +5,7 @@
     <div class="content">
       <h4 style="font-weight: bold;">{{ title }}</h4>
       <p>{{ description }}</p>
+      <p class="tech">Technologies : {{ technologies }}</p>
       <v-btn 
         class="btn px-3"
         color="#403930" 
@@ -24,6 +25,7 @@
 defineProps({
   title: String,
   description: String,
+  technologies: String,
   image: String,
   featured: Boolean,
   page: String,
@@ -66,6 +68,11 @@ defineProps({
   padding-inline: 0;
 }
 
+.tech {
+  font-weight: 600;
+  color: #403930;
+  margin-top: 0.3rem;
+}
 
 @media (max-width: 900px) {
   .card.featured {
